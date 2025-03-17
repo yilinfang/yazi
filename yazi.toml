@@ -1,0 +1,3 @@
+[[plugin.prepend_preloaders]]
+name = "image/*"
+run = "noop"
