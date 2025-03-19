@@ -13,11 +13,9 @@ prepend_preloaders = [
 ]
 
 prepend_previewers = [
-  # Disable Image
+  # Use file instead
   { mime = "image/{avif,hei?,jxl,svg+xml}", run = "file" },
   { mime = "image/*", run = "file" },
-  # Disable Video
   { mime = "video/*", run = "file" },
-  # Disable PDF
   { mime = "application/pdf", run = "file" },
 ]
