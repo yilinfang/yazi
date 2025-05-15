@@ -1,0 +1,3 @@
+# yazi
+
+Personal Yazi configuration.

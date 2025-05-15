@@ -1,0 +1,37 @@
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[manager]
+show_hidden = true
+
+[plugin]
+# Disable some preloaders
+prepend_preloaders = [
+  # Image
+  { mime = "image/{avif,hei?,jxl}", run = "noop" },
+  { mime = "image/svg+xml", run = "noop" },
+  { mime = "image/*", run = "noop" },
+  # Video
+  { mime = "video/*", run = "noop" },
+  # PDF
+  { mime = "application/pdf", run = "noop" },
+  # Font
+  { mime = "font/*", run = "noop" },
+  { mime = "application/ms-opentype", run = "noop" },
+]
+
+# Disable some previewers
+prepend_previewers = [
+  # JSON
+  { mime = "application/{json,ndjson}", run = "code" },
+  # Image
+  { mime = "image/{avif,hei?,jxl}", run = "file" },
+  { mime = "image/svg+xml", run = "file" },
+  { mime = "image/*", run = "file" },
+  # Video
+  { mime = "video/*", run = "file" },
+  # PDF
+  { mime = "application/pdf", run = "file" },
+  # Font
+  { mime = "font/*", run = "file" },
+  { mime = "application/ms-opentype", run = "file" },
+]
